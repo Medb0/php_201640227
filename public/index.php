@@ -1,0 +1,24 @@
+<?php
+$layout = file_get_contents("../theme/index.html");
+
+$filename = $_SERVER['REQUEST_URI'].".htm";
+
+//파일이 있으면 치환 없으면 다른 파일로 치환
+if(file_exists("../".$filename)){
+    $body = file_get_contents("../".$filename);
+    $layout = str_replace("{{main}}",$body,$layout);
+}else{
+    $body = file_get_contents("../home.htm");
+    $layout = str_replace("{{main}}",$body,$layout);
+}
+
+echo $layout;
+
+/*
+echo "내가 처음이야";
+$filename = $_SERVER['REQUEST_URI'].".htm";
+echo $filename."을 읽어옵니다.";
+
+$body = file_get_contents("../".$filename);
+echo $body;
+*/
