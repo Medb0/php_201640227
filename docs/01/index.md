@@ -3,4 +3,4 @@
 수업내용 정리
 
 화면캡쳐
-![blue](./img/blue.jpg)
+![blue](./img/blue.png)
