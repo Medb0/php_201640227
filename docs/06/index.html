@@ -8,7 +8,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <title>4주차 리포트</title>
+  <title>6주차 리포트</title>
 </head>
 <body>
   <body>
@@ -25,7 +25,8 @@
         </div>
         <div class="col">
           <p>
-            1.쿠키는 접속한 사용자 컴퓨터에 저장되는 데이터이다.<br>
+            1.쿠키<br>
+            쿠키는 접속한 사용자 컴퓨터에 저장되는 데이터이다.<br>
             접속자 브라우저가 실행되고 있는 경우에만 존재한다.<br>
             PHP에서는 간단한 쿠키 내부 함수를 통해 쿠키 값을 설정할 수 있다.
           </p>
@@ -38,13 +39,12 @@
           <img src="./img/2.png" alt="..." class="img-thumbnail" >
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <pre>
-            2. 세션은 쿠키의 문제점을 보완하기 위해 민감한 정보를 접속자의 컴퓨터가 아닌 서버에 저장하는 기술이다.
-            세션은 접속자의 브라우저가 실행되고 있는 동안 유지된다.
-          </pre>
-        </div>
+      <div class="col">
+        <p>
+          2.세션<br>
+          세션은 쿠키의 문제점을 보완하기 위해 민감한 정보를 접속자의 컴퓨터가 아닌 서버에 저장하는 기술이다.<br>
+          세션은 접속자의 브라우저가 실행되고 있는 동안 유지된다.
+        </p>
       </div>
       <hr>
 
@@ -53,11 +53,11 @@
           <img src="./img/3.png" alt="..." class="img-thumbnail" >
         </div>
         <div class="col">
-          <pre>
-            3. setcookie
-            쿠키를 설정할 수 있는 setcookie라는 내장함수가 있다.
+          <p>
+            3. setcookie<br>
+            쿠키를 설정할 수 있는 setcookie라는 내장함수가 있다.<br>
             setcookie의 파라매터는 쿠키가 저장될 변수명 , 저장될 값 , 시간 , 경로 로 이루어져있다.
-          </pre>
+          </p>
         </div>
       </div>
       <hr>
@@ -67,9 +67,13 @@
           <img src="./img/4.png" alt="..." class="img-thumbnail" >
         </div>
         <div class="col">
-          <pre>
-            4.scandir
-          </pre>
+          <p>
+            4.scandir<br>
+            scandir 함수는 해당 폴더에 있는 파일,폴더를 보여준다.<br>
+            ex) array scandir ( string $directory [, int $sorting_order = SCANDIR_SORT_ASCENDING [, resource$context ]] ) <br>
+            두번째 인자는 출력될 정렬방식이다.<br>
+            scandir() 함수 사용할 경우 print_r() 함수를 활용하여 확인이 가능하다.
+          </p>
         </div>
       </div>
       <hr>
@@ -81,9 +85,14 @@
       </div>
       <div class="row">
         <div class="col">
-          <pre>
-            5.is_dir
-          </pre>
+          <p>
+            5.is_dir<br>
+            is_dir 함수는 입력된 값이 디렉토리인지 확인하는 역할을 한다.<br>
+            ex) <br>
+            if(is_dir($test_file)){<br>
+              echo "디렉토리 임";<br>
+            }
+          </p>
         </div>
       </div>
       <hr>
@@ -93,9 +102,12 @@
           <img src="./img/6.png" alt="..." class="img-thumbnail" >
         </div>
         <div class="col">
-          <pre>
-            6.
-          </pre>
+          <p>
+            6.json_encode <br>
+            PHP Array 또는 String을 거의 모든 프로그래밍 언어에서 호환되는 JSON String으로 묶어 반환하는 PHP 함수 <br>
+            첫 번째 명령어 $value는 JSON으로 묶을 Array 또는 String 값이다. String일 경우 곁따옴표가 양쪽에 붙는다. <br>
+            두 번째 명령어 $options는 이스케이프할 문자를 설정할 수 있다.<br>
+          </p>
         </div>
       </div>
     </div>
