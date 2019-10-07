@@ -4,7 +4,7 @@
 
 1. php 에서 다른 코드를 불러올때는 include "코드명"을 사용해서 불러온다. 
 
-   ![1](./img/1.png)
+   <img src="./img/1.png" alt="1" style="zoom:75%;" />
 
 
 
