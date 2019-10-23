@@ -6,10 +6,28 @@ class Database
 {
   public $connect;
 
+  // 복합 객체 - 객체지향의 은닉화
+  // public , private , protected
+  // private은 자기 클래스에서만 접근 가능하기때문에
+  // 접근시에는 get , set 함수를 만들어서 접근한다.
+  private $Table;
+  public function setTable($name)
+  {
+    $this->Table = $name;
+    return $this;
+  }
+  public function getTable()
+  {
+    return $this->Table;
+  }
+
   // 생성자 메소드
   public function __construct($config)
   {
     echo "클래스 생성";
+
+    //테이블 객체 연결
+    $this->Table = new Table($this);
 
     // mysqli 객체 생성
     $this->connect = new mysqli($config['host'], $config['user'], $config['password'], $config['database']);
@@ -34,5 +52,24 @@ class Database
     }
 
     return $result;
+  }
+
+  /*
+  // 테이블 확인
+  */
+  public function isTable($tablename)
+  {
+    $query = "SHOW TABLES";
+    $result = $this->queryExecute($query);
+
+    $count = mysqli_num_rows($result);
+
+    for ($i=0; $i < $count ; $i++) {
+      $row = mysqli_fetch_object($result);
+      if($row->Tables_in_php == $tablename){
+        return true;
+      }
+    }
+    return false;
   }
 }

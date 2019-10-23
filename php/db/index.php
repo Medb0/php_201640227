@@ -2,6 +2,7 @@
 
 include 'dbconf.php';
 require 'database.php';
+require 'table.php';
 
 // 순서가 틀릴경우를 대비한 연상배열
 $config = [
@@ -9,37 +10,26 @@ $config = [
   "user"=>$user,
   "password"=>$password,
   "database"=>$database];
-$db = new Database($config);
-
-$query = "SHOW TABLES";
-$result = $db->queryExecute($query);
-$count = mysqli_num_rows($result);
-
-echo "테이블 개수는 ".$count."<br>";
-
-for ($i=0; $i < $count ; $i++) {
-  $row = mysqli_fetch_object($result);
-  echo "테이블 = ".$row->Tables_in_php."<br>";
-}
+$db= new Database($config);
 
 /*
-
-// 테이블을 생성할때 사용할 변수
-$query =
-"create table `members` (
-    `id` int(11) NOT NULL auto_increment,
-    lastName varchar(255),
-    FirstName varchar(255),
-    PRIMARY KEY(`id`)
-    ) ENGINE=innodb default charset=utf8;
-  ";
-
-if (mysqli_query($connect, $query)) {
-  echo "테이블 생성 완료<br>";
-}else {
-  print "테이블 생성 실패";
-}
-
-// mysql 접속 해제
-mysqli_close($connect);
+// 테이블 객체를 생성해서 연결
+$db->setTable(new Table);
+// 연결된 객체를 읽어옴.
+$db->getTable()->createTable();
 */
+// 메소드체인 기법을 활용한 방법
+//$db->setTable(new Table($db))->getTable()->createTable();
+$db->getTable()->createTable("members3",
+  [
+    'Last'=>"varchar(50)",
+    'First'=>"varchar(50)",
+    'Age'=>"varchar(50)"
+  ]
+);
+
+if ($db->isTable("members")) {
+  echo "테이블이 존재합니다.<br>";
+}else {
+  echo "테이블이 존재하지 않습니다.<br>";
+}
