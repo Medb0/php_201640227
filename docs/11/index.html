@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <title>10주차 리포트</title>
+  <title>11주차 리포트</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
   <body>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4"><a href="..">10주차 리포트</a></h1>
+        <h1 class="display-4"><a href="..">11주차 리포트</a></h1>
         <p class="lead"> ๑'͡o_'͡o๑ </p>
       </div>
     </div>
@@ -28,8 +28,8 @@
         </div>
         <div class="col">
           <p>
-            1.index.php<br>
-            이전 프로젝트 정리가 잘 안된관계로 프로젝트를 다시 만들어서 정리하는중이다.
+            1.Databases.php<br>
+            Tables.php 처럼 DB 목록을 출력하는 파일을 만든다.
           </p>
         </div>
       </div>
@@ -40,10 +40,9 @@
         </div>
         <div class="col">
           <p>
-            2.Loading.php<br>
-            spl_autoload_register 함수를 사용해서 필요한 클래스를 <br>
-            자동으로 require 해주는 함수를 만들어 논다.
-
+            2.database.html<br>
+            Table.php와 마찬가지로 Databases.php를 만들었으니 <br>
+            Resource에 html도 똑같이 만들어주고 경로를 수정한다.
           </p>
         </div>
       </div>
@@ -55,8 +54,9 @@
         </div>
         <div class="col">
           <p>
-            3.Table.php<br>
-            이전 프로젝트의 Table을 생성하는 클래스를 가져옴.
+            3.Uri 체크<br>
+            현재 Uri를 검사하여 접속된 Uri가 table로 접속하게된다.<br>
+            Uri가 없으면 데이터가 없음으로 나온다.
           </p>
         </div>
       </div>
@@ -68,9 +68,8 @@
         </div>
         <div class="col">
           <p>
-            4.index.php 수정 + Database.php 추가<br>
-            Database.php에서 DB의 Table 값을 불러오고
-            index.php의 table.html을 불러와서 수정한다.
+            4.테이블 접속<br>
+            접속시에 Uri를 확인하여 해당 table을 출력한다.
           </p>
         </div>
       </div>
@@ -82,8 +81,9 @@
         </div>
         <div class="col">
           <p>
-            5.bootstrap jumbotron 적용<br>
-            jumbotron을 적용시켜 list 모양을 깔끔하게 바꿈.
+            5.Uri 체크 최적화<br>
+            Uri를 체크를 하는 코드를 따로 빼서 파일로 만들어주고 <br>
+            어디서든지 사용할 수 있도록 클래스와 함수를 만들어둔다.
           </p>
         </div>
       </div>
@@ -94,8 +94,8 @@
         </div>
         <div class="col">
           <p>
-            6.index , table 수정 <br>
-            table에 있던 html 코드를 index에서 한꺼번에 처리하게끔 수정한다.<br>
+            6.$_POST <br>
+            PHP에서는 post로 넘어온 값을 $_POST로 사용할 수 있다.
           </p>
         </div>
       </div>
@@ -105,24 +105,13 @@
           <img src="./img/7.png" alt="..." class="img-thumbnail">
         </div>
         <div class="col">
-          <p>
-            7.HtmlTable.php<br>
-            index.php는 컨트롤러의 역할이다.<br>
-            컨트롤러의 역할 중에 html이 섞이면 MVC패턴이 흐지부지되기 떄문에<br>
-            HtmlTable.php를 따로 만들어서 뷰에 뿌려주는 컨트롤러를 따로 만들어준다.
-          </p>
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col">
           <img src="./img/8.png" alt="..." class="img-thumbnail">
         </div>
         <div class="col">
           <p>
-            8.URI 제어<br>
-            URI 폴더에 들어가는 방식이 아닌 어디서 들어가든지 그 폴더가 최상위가 되도록 사전작업 및 테스트를 하는 코드이다.<br>
-            URI 주소를 "/" 로 구분하여 배열에 넣는다.
+            7.데이터 삽입 기능 추가<br>
+            insert.html을 만들고 폼을 만들어준다.<br>
+            만든 폼에 값을 넣고 버튼을 누르면 값을 넣고 데이터 조회 페이지로 돌아온다.
           </p>
         </div>
       </div>
