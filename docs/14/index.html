@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>14주차 리포트</title>
+</head>
+
+<body>
+
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4"><a href="..">14주차 리포트</a></h1>
+        <p class="lead"> ๑'͡o_'͡o๑ </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/1.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            1.컨트롤러에 인터페이스 적용<br>
+            각 컨트롤러는 main() 함수에서 시작하기 때문에 interface를 만들어서<br>
+            main()을 만들게한다. <br>
+            interface는 상속받을시 implements 키워드를 사용한다.
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/2.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            2.추상클래스<br>
+            interface와 별개로 일반 메소드가 필요할 경우에는 추상클래스를 사용한다.<br>
+            클래스에 abstract 키워드가 붙으면 그 클래스는 추상클래스가 된다.<br>
+            메소드에 abstract 키워드가 붙으면 그 메소드는 추상메소드(=만들어야하는메소드)가 된다.<br>
+            일반 메소드를 만들어 놓으면 그 메소드는 상속받아서 사용할 수 있다.<br>
+            추상클래스를 상속시 extends 키워드를 사용한다.
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/3.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            3.Goods.php<br>
+            상품페이지 역할을 하는 Goods.php와 뷰로 뿌려줄 Goods.html 을 만들고 <br>
+            table에 goods를 추가해준다. 컬럼 ( id , images , price) 설정 <br>
+            마지막으로 DB 호출
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/4.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            4.bootstrap 적용<br>
+            부트스트랩을 적용시켜 상품목록을 꾸며준다.
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/5.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            5.상품 목록 삽입 기능 추가 1<br>
+            Goods_new.html을 만들고 Goods.php에 Uri를 검사해서 상품 삽입과 상품 목록 출력을 하는 분기점을 만든다.
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/6.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            6.상품 목록 삽입 기능 추가 2<br>
+            form에서 파일을 업로드 할 경우 html 에서 form에 enctype="multipart/form-data" 를 작성해야한다. <br>
+            php에서는 move_uploaded_file(임시저장되어있는경로 , 실제경로와파일이름) 을 사용해야한다.
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/7.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            7.DB 생성 기능 추가<br>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/8.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            8.테이블 생성 기능 추가<br>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/9.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            9.테이블 생성 기능에 부트스트랩 적용및 select폼 사용<br>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/10.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            10.테이블 삭제 기능 추가<br>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">  <!-- 시작 -->
+        <div class="col">
+          <img src="./img/11.png" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <p>
+            11.테이블 초기화 기능 추가<br>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <hr>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+  </html>
