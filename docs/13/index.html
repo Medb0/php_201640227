@@ -29,6 +29,9 @@
         <div class="col">
           <p>
             1.index에 부트스트랩 추가<br>
+            로그인을 위한 form을 넣어준다.<br>
+            로그인폼은 부트스트랩에서 예제를 가져와서 적용한다.<br>
+            폼에서 전송할때 방식은 POST를 사용한다.
           </p>
         </div>
       </div>
@@ -41,6 +44,8 @@
         <div class="col">
           <p>
             2.$_POST 값을 이용한 로그인<br>
+            폼에서 전송하는 방식이 POST이므로 POST값을 가져올 때는 $_POST 상수를 사용해서 값을 불러올 수 있다. <br>
+            if문에 POST 값으로 비교하여 이메일과 비밀번호가 이미 설정된 값과 같으면 로그인 성공을 출력하고 아니면 로그인 실패를 출력한다.
           </p>
         </div>
       </div>
@@ -56,6 +61,9 @@
         <div class="col">
           <p>
             3.$_SESSION 값을 이용한 로그인<br>
+            $_POST 값으로 로그인이 성공하면 세션에 로그인한 이메일을 넣어준다. <br>
+            index.php에 세션 값을 받아올 수 있도록 session_start() 함수를 이용하여 세션을 열어주고 <br>
+            로그인한 내용(=email)을 불러올 수 있다.
           </p>
         </div>
       </div>
@@ -68,6 +76,7 @@
         <div class="col">
           <p>
             4.로그아웃 기능 추가<br>
+            LogOut.php에서는 세션에 있는 값을 제거해주면 로그아웃은 끝난다.
           </p>
         </div>
       </div>
@@ -80,6 +89,7 @@
         <div class="col">
           <p>
             5.로그인 상태에 따른 경로 이동<br>
+            로그인한 상태에서는 index.php에 있을 필요가 없기 때문에 바로 Database 목록으로 이동시킨다.
           </p>
         </div>
       </div>
@@ -92,6 +102,10 @@
         <div class="col">
           <p>
             6.DB 생성을 위한 기존의 PHP 파일들 수정<br>
+            DB 생성 버튼에 기능을 추가해준다. <br>
+            DB 생성 버튼을 누르면 Databases/new 로 이동하도록 하고 <br>
+            uri를 검사하여 databases/new가 들어오는것을 확인 <br>
+            new 일경우 DB생성 출력 아닐경우는 DB 목록을 출력한다.
           </p>
         </div>
       </div>
@@ -104,6 +118,12 @@
         <div class="col">
           <p>
             7.DB 생성 기능 추가<br>
+            DB 생성을 하기위해 DB명이 들어간다. <br>
+            $_POST에 값이 있을 경우 == 폼에 입력하고 버튼을 누름
+            DB명을 입력받는 폼을 만들어놓고 POST방식으로 database라는 이름으로 값을 전송한다. <br>
+            $_POST['database'] 으로 값을 불러오고 쿼리(생성역할)를 생성하고 실행한다.
+            그 후에 이전 목록으로 이동시킨다.
+            없을 경우에는 database_new.html 호출하여 출력한다.
           </p>
         </div>
       </div>
@@ -116,6 +136,8 @@
         <div class="col">
           <p>
             8.테이블 생성 기능 추가<br>
+            DB와 마찬가지로 table에도 생성 기능을 넣어준다. <br>
+            비교 방식은 POST 값을 가지고 하 차이점은 table 생성 쿼리 부분에 컬럼값이 들어가는 정도
           </p>
         </div>
       </div>
@@ -128,6 +150,9 @@
         <div class="col">
           <p>
             9.테이블 생성 기능에 부트스트랩 적용및 select폼 사용<br>
+            테이블 생성에 컬럼의 자료형을 정할 때 select 태그를 사용하여 <br>
+            그 안의 option 태그의 값을 가변문자열 , 정수형, 텍스트 , 날짜 등으로 넣어두고 <br>
+            value를 varchar(255) , int(11) , text, datetime으로 정해두면 값을 전달할때 그 값을 가져다가 사용하면된다.
           </p>
         </div>
       </div>
@@ -140,6 +165,8 @@
         <div class="col">
           <p>
             10.테이블 삭제 기능 추가<br>
+            테이블 삭제 버튼을 추가하고 눌렀을때 TableInfo/테이블명/delete 로 이동시킨다.<br>
+            이동시키고 쿼리를 생성한다. 쿼리는 DROP TABLE 테이블명을 하면된다.
           </p>
         </div>
       </div>
@@ -152,6 +179,10 @@
         <div class="col">
           <p>
             11.테이블 초기화 기능 추가<br>
+            초기화 버튼도 추가하고 삭제와 마찬가지로 작동한다. <br>
+            쿼리는 TRUNCATE TABLE 테이블명을 하면되고 <br>
+            이 기능을 한 이유는 id값이 auto_increment로 지정된 값이기 때문에 처음부터 사용하기 위해서는 delete로 값을 삭제하는 것보다 <br>
+            초기화를 시키는게 맞다.
           </p>
         </div>
       </div>
